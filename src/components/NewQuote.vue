@@ -13,7 +13,9 @@
     }),
     destroyed: function() {
       console.log('destroyed')
-    }
+    },
+    deactivated: () => console.log('Deactivated'),
+    activated: () => console.log('activated!')
   }
 </script>
 
