@@ -8,7 +8,7 @@
                 <button @click="selectedComponent = 'app-red'" class="btn btn-danger">Load Red Template</button>
                 <hr>
                 <component :is="selectedComponent">
-                    <p>{{ getContent() }}</p>
+                    <p>Default passed content</p>
                 </component>
                 <!-- <app-blue>
                     <p>Blue passed content</p>
@@ -37,13 +37,6 @@
             appBlue: Blue,
             appGreen: Green,
             appRed: Red
-        },
-        methods: {
-            getContent: () => {
-                if (this.selectedComponent === 'app-green') return 'Green content displayed';
-                if (this.selectedComponent === 'app-red') return 'Red content displayed';
-                return 'Blue content displayed';
-            }
         }
     }
 </script>
